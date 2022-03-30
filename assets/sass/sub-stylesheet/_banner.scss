@@ -1,0 +1,125 @@
+//?=== banner area css start ===?//
+.banner-area {
+  .banner-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        min-height: 700px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.banner-bg1 {
+          background-image: url(../../assets/images/banner/03.jpg);
+        }
+        &.banner-bg2 {
+          background-image: url(../../assets/images/banner/01.jpg);
+        }
+        &.banner-bg3 {
+          background-image: url(../../assets/images/banner/03.jpg);
+        }
+        &.banner-bg4 {
+          background-image: url(../../assets/images/banner/04.jpg);
+        }
+        .banner-content {
+          min-height: 700px;
+          line-height: 700px;
+          .banner-text {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 420px;
+            margin-left: 0;
+            line-height: 1.5;
+            h2 {
+              margin: 0;
+              font-weight: 600;
+              color: $white-color;
+            }
+            h3 {
+              margin: 0;
+              color: $white-color;
+            }
+            p {
+              margin: 0;
+              color: $white-color;
+            }
+            button.btn {
+              margin-top: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//?=== banner area css ends  ===?//
+
+//?=== page header css start ===?//
+.page-breadcamp {
+  min-height: 150px;
+  /* background-size: 120% 60%; */
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/banner/view-bg.jpg);
+  @include breakpoint(sm) {
+    min-height: 200px;
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .breadcamp-content {
+    line-height: 150px;
+    vertical-align: middle;
+    @include breakpoint(sm) {
+      line-height: 200px;
+    }
+    ul.bread-menu {
+      @extend %flex;
+      align-items: center;
+      li {
+        a {
+          padding: 5px 10px;
+          font-weight: 500;
+          font-size: 14px;
+          color: $white-color;
+          display: inline-block;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &.style-one {
+    min-height: 300px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../assets/images/banner/room-bg.jpg);
+    h2 {
+      margin: 0;
+      font-weight: 600;
+      color: $white-color;
+      padding-bottom: 16px;
+    }
+    .breadcamp-content {
+      line-height: normal;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul.bread-menu {
+        justify-content: center;
+        li {
+          margin: 0 6px;
+          a {
+            border: 0.5px dashed;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            &:hover,
+            &.active {
+              border-color: $theme-color;
+              background: $theme-gradient;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//?=== page header css ends  ===?//

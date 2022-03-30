@@ -1,0 +1,387 @@
+(function ($) {
+  "use strict";
+
+  $(window).on("load", function () {
+    $(".popup-newsletter-active").addClass("show");
+  });
+  $(".popup-newsletter-closer").on("click", function () {
+    $(".popup-newsletter-active").removeClass("show");
+  });
+  // $(".popup-newsletter-active").on("click", function () {
+  //   $(".popup-newsletter-active").removeClass("show");
+  // });
+
+  // Progress bar
+  var wind = $(window);
+  wind.on("scroll", function () {
+    $(".skill-progress .progres").each(function () {
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      var myVal = $(this).attr("data-value");
+      if (bottom_of_window > bottom_of_object) {
+        $(this).css({
+          width: myVal,
+        });
+      }
+    });
+  });
+
+  //sidebar top fixed start
+  var fixed_top = $(".header-sticky");
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 70) {
+      fixed_top.addClass("menu-fixed animated fadeInDown");
+      // fixed_top.removeClass("slideInUp");
+      $("body").addClass("body-padding");
+    } else {
+      fixed_top.removeClass("menu-fixed fadeInDown");
+      // fixed_top.addClass("slideInUp");
+      $("body").removeClass("body-padding");
+    }
+  });
+
+  //menu side bar
+  $("#mobileBtn").on("click", function () {
+    $(".main-menu, .body-overlay").toggleClass("active");
+  });
+
+  $("#croseBtn").on("click", function () {
+    $(".movie-sidebar,.body-overlay,.movie-sliderBtn").removeClass("active");
+  });
+
+  $(".movie-sliderBtn").on("click", function () {
+    $(".movie-sliderBtn").toggleClass("active");
+  });
+
+  // remove overlay
+  $(".body-overlay").on("click", function () {
+    $(".main-menu,.body-overlay").removeClass("active");
+  });
+
+  //  Bookmark & Search
+  var $filename = $(".search-input input").data("search"),
+    navLinkSearch = $(".search-bar"),
+    searchInput = $(".search-input"),
+    searchInputInputfield = $(".search-input input"),
+    searchList = $(".search-input .search-list"),
+    appContent = $(".app-content");
+
+  // Navigation Search area Open
+  navLinkSearch.on("click", function () {
+    var $this = $(this);
+    var searchInput = $(this).parent(".item-list").find(".search-input");
+    searchInput.addClass("open");
+    searchInputInputfield.focus();
+    searchList.find("li").remove();
+  });
+
+  // Navigation Search area Close
+  $(".search-input-close svg").on("click", function () {
+    var $this = $(this),
+      searchInput = $(this).closest(".search-input");
+    if (searchInput.hasClass("open")) {
+      searchInput.removeClass("open");
+      searchInputInputfield.val("");
+      searchInputInputfield.blur();
+      searchList.removeClass("show");
+      appContent.removeClass("show-overlay");
+    }
+  });
+
+  // Scroll To Top
+  var scrollTop = $(".scrollToTop");
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() < 500) {
+      scrollTop.removeClass("active");
+    } else {
+      scrollTop.addClass("active");
+    }
+  });
+
+  //Click event to scroll to top
+  $(".scrollToTop").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+
+  //creating a style object for the ripple effect
+  function RippleStyle(width, height, posX, posY) {
+    this.width = width <= height ? height : width;
+    this.height = width <= height ? height : width;
+    this.top = posY - this.height * 0.5;
+    this.left = posX - this.width * 0.5;
+  }
+  $(".btn").on("mousedown", function (e) {
+    //appending an element with a class name "btn-ripple"
+    var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
+
+    //getting the button's offset position
+    var pos = $(this).offset();
+
+    //get the button's width and height
+    var width = $(this).outerWidth();
+    var height = $(this).outerHeight();
+
+    //get the cursor's x and y position within the button
+    var posX = e.pageX - pos.left;
+    var posY = e.pageY - pos.top;
+
+    //adding a css style to the ripple effect
+    var rippleStyle = new RippleStyle(width, height, posX, posY);
+    rippleEl.css(rippleStyle);
+  });
+
+  //this event listener will be triggered once the ripple animation is done
+  $(".btn").on(
+    "animationend webkitAnimationEnd oanimationend MSAnimationEnd",
+    ".btn-ripple",
+    function () {
+      $(this).remove();
+    }
+  );
+
+  //#  image loaded hear  #//
+  $(".container").imagesLoaded(function () {
+    $(".portfolio-menu").on("click", ".button", function () {
+      var filterValue = $(this).attr("data-filter");
+      $grid.isotope({ filter: filterValue });
+    });
+    // change is-checked class on buttons
+    $(".button-group").each(function (i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on("click", ".button", function () {
+        $buttonGroup.find(".is-checked").removeClass("is-checked");
+        $(this).addClass("is-checked");
+      });
+    });
+    var $grid = $(".grid").isotope({
+      itemSelector: ".grid-item",
+      percentPosition: true,
+      masonry: {
+        columnWidth: 1,
+      },
+    });
+  });
+
+  // chate button
+  $(document).on("click", ".media-btn, .media-close", function () {
+    $(".social-media").toggleClass("open");
+  });
+
+  // simple parallax
+  // var image = document.getElementsByClassName('thumbnail');
+  //   new simpleParallax(image, {
+  //     delay: .6,
+  //     transition: 'cubic-bezier(0,0,0,1)'
+  // });
+
+  // watching slider padd remove
+  $(document).ready(function () {
+    $("#paddRemove").on("click", function () {
+      // $('.padding-remove').animate({
+      //   paddingLeft : '0'
+      // })
+      setTimeout(function () {
+        $(".padding-remove").animate({
+          paddingLeft: "0",
+        });
+      }, 1);
+    });
+  });
+
+  // lightcase activation//
+  // $('a[data-rel^=lightcase]').lightcase();
+
+  // banner slider js
+  var swiper = new Swiper(".banner-slider", {
+    autoplay: {
+      delay: 3000,
+    },
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        origin: "left center",
+        translate: ["-5%", 0, -200],
+        rotate: [0, 100, 0],
+      },
+      next: {
+        origin: "right center",
+        translate: ["5%", 0, -200],
+        rotate: [0, -100, 0],
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // banner slider js
+  var swiper = new Swiper(".fasion-slider", {
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-125%", 0, -800],
+        rotate: [0, 0, -90],
+      },
+      next: {
+        shadow: true,
+        translate: ["125%", 0, -800],
+        rotate: [0, 0, 90],
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // new arrival slider
+  var swiper = new Swiper(".new-arrival-slider", {
+    slidesPerView: 1.5,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 3.5,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+      1440: {
+        slidesPerView: 5,
+      },
+    },
+  });
+
+  // popular category slider
+  var swiper = new Swiper(".category-slider", {
+    slidesPerView: 1.5,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 3.5,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+      1440: {
+        slidesPerView: 5,
+      },
+    },
+  });
+
+  //product details slider
+  var galleryThumbs = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      575: {
+        slidesPerView: 5,
+      },
+    },
+  });
+  var galleryTop = new Swiper(".gallery-top", {
+    spaceBetween: 10,
+    autoplay: true,
+    navigation: {
+      nextEl: ".product-button-next",
+      prevEl: ".product-button-prev",
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
+
+  // quick view slider js
+  var swiper = new Swiper(".quick-slider-js", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // product view mode change js
+  $(".product-view-mode").on("click", "a", function (e) {
+    e.preventDefault();
+    var shopProductWrap = $(".product-wrap");
+    var viewMode = $(this).data("target");
+    $(".product-view-mode a").removeClass("active");
+    $(this).addClass("active");
+    shopProductWrap.removeClass("grid list").addClass(viewMode);
+  });
+
+  // model option start here
+  $(".view-modal").on("click", function () {
+    $(".modals").addClass("show");
+  });
+
+  $(".close").on("click", function () {
+    $(".modals").removeClass("show");
+  });
+  // shop cart + - start here
+  var CartPlusMinus = $(".cart-plus-minus");
+  CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
+  CartPlusMinus.append('<div class="inc qtybutton">+</div>');
+  $(".qtybutton").on("click", function () {
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+    if ($button.text() === "+") {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+      // Don't allow decrementing below zero
+      if (oldValue > 0) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 1;
+      }
+    }
+    $button.parent().find("input").val(newVal);
+  });
+
+  // social bar js
+  $("#socialSlideBtn").on("click", function () {
+    $("#socialSlide").addClass("show");
+  });
+
+  $("#closeSocailBar").on("click", function () {
+    $("#socialSlide").removeClass("show");
+  });
+
+  // tooltip js
+  var tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+})(jQuery);
