@@ -847,7 +847,7 @@ header .header-sticky .header-item .logo-area {
 
 @media (min-width: 1350px) {
   header .header-sticky .header-item .logo-area {
-    width: 65%;
+    width: 66%;
   }
 }
 
@@ -1059,7 +1059,7 @@ header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-me
 
 @media (min-width: 1350px) {
   header .header-sticky .header-item .user-item {
-    width: calc(100% - 65%);
+    width: calc(100% - 70%);
   }
 }
 
@@ -2033,6 +2033,24 @@ header .header-sticky.style-one {
 .about-area .about-btn-box {
   margin-top: 35px;
   display: inline-block;
+}
+
+.our-product {
+  padding: 60px 0;
+}
+
+.our-product .section-wrapper {
+  margin-top: 40px;
+}
+
+.our-product .section-wrapper .product-item .item-thumb {
+  border-radius: 6px;
+}
+
+.our-product .section-wrapper .product-item .item-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 footer {

@@ -365,6 +365,25 @@
 }
 //?=== about area ends  ===?//
 
+//?=== our product css start ===?//
+.our-product {
+  padding: 60px 0;
+  .section-wrapper {
+    margin-top: 40px;
+    .product-item {
+      .item-thumb {
+        border-radius: 6px;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+//?=== our product css ends  ===?//
+
 //*=== footer area start ===*//
 footer {
   padding: 40px 0;

@@ -30,7 +30,7 @@ header {
           width: 70%;
         }
         @media (min-width: 1350px) {
-          width: 65%;
+          width: 66%;
         }
         .logo {
           width: 100px;
@@ -181,7 +181,7 @@ header {
           width: calc(100% - 70%);
         }
         @media (min-width: 1350px) {
-          width: calc(100% - 65%);
+          width: calc(100% - 70%);
         }
         .item-list {
           @extend %flex;
