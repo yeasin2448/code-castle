@@ -408,11 +408,11 @@
         left: 10px;
         right: 10px;
         bottom: -20px;
-        background-color: #fff;
         z-index: 2;
-        padding: 20px 20px;
-        visibility: hidden;
         opacity: 0;
+        visibility: hidden;
+        padding: 20px 20px;
+        background-color: #fff;
         -webkit-transition: all 0.3s ease-out 0s;
         -o-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s;
@@ -454,6 +454,88 @@
   }
 }
 //?=== our product css ends  ===?//
+
+//?=== our team css start ===?//
+.our-team {
+  padding: 60px 0;
+  .section-wrapper {
+    padding-top: 40px;
+    .team-item {
+      text-align: center;
+      position: relative;
+      &:hover {
+        .team_line {
+          opacity: 1;
+          &.team_line_top,
+          &.team_line_bottom {
+            width: calc(100% + 110px);
+          }
+          &.team_line_left,
+          &.team_line_right {
+            height: calc(100% + 110px);
+          }
+        }
+      }
+      .item-thumb {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .item-text {
+        padding-top: 12px;
+        h4 {
+          margin: 0;
+          font-weight: 500;
+        }
+        p {
+          margin: 0;
+          font-weight: 400;
+        }
+      }
+      .team_line {
+        position: absolute;
+        opacity: 1;
+        transition: 0.5s;
+        z-index: 99;
+        background-color: #75a1fb;
+        &.team_line_top,
+        &.team_line_bottom {
+          width: 0;
+          height: 2px;
+          left: -60px;
+          background: linear-gradient(
+            to right,
+            rgba(117, 161, 251, 0),
+            #14b1bb,
+            rgba(117, 161, 251, 0)
+          );
+        }
+        &.team_line_top {
+          position: absolute;
+          top: 0;
+        }
+        &.team_line_left,
+        &.team_line_right {
+          height: 0;
+          width: 2px;
+          top: -60px;
+          background: linear-gradient(
+            to top,
+            rgba(117, 161, 251, 0),
+            #14b1bb,
+            rgba(117, 161, 251, 0)
+          );
+        }
+        &.team_line_right {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+//?=== our team css ends  ===?//
 
 //*=== footer area start ===*//
 footer {
@@ -500,7 +582,7 @@ footer {
 }
 //*=== footer area ends  ===*//
 
-//?=== product view page css start ===?//
+//?=== product page css start ===?//
 .porduct-view {
   padding: 40px 0;
   .primary-sidebar {
@@ -1046,6 +1128,7 @@ footer {
     }
   }
 }
+//?=== product page css ends  ===?//
 
 // quick view modal css
 .modals {
