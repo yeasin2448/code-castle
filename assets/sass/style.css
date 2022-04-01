@@ -2043,6 +2043,34 @@ header .header-sticky.style-one {
   margin-top: 40px;
 }
 
+.our-product .section-wrapper .product-item {
+  position: relative;
+}
+
+.our-product .section-wrapper .product-item:hover .item-text {
+  bottom: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.our-product .section-wrapper .product-item:hover .item-text p {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.our-product .section-wrapper .product-item:hover .item-text h3 {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
 .our-product .section-wrapper .product-item .item-thumb {
   border-radius: 6px;
 }
@@ -2051,6 +2079,56 @@ header .header-sticky.style-one {
   width: 100%;
   height: auto;
   border-radius: 6px;
+}
+
+.our-product .section-wrapper .product-item .item-text {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -20px;
+  background-color: #fff;
+  z-index: 2;
+  padding: 20px 20px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.our-product .section-wrapper .product-item .item-text p {
+  color: #059dc0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.our-product .section-wrapper .product-item .item-text h3 {
+  margin: 0;
+  color: #1b1b1b;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.our-product .section-wrapper .product-item .item-text h3 a {
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  outline: 0 !important;
+  color: #0b0b31;
 }
 
 footer {
