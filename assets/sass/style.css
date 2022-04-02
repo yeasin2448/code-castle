@@ -3,13 +3,13 @@ overflow
 */
 /*!
 <----------------------------------------
-  Theme Name: moviedom.
+  Theme Name: Code-castle.
   Theme URI: https://www.itdom.de/.
   Author: itdom.
   Author URI: https://www.itdom.de/.
-  Description: moviedom is a Creative HTML5 Template for Saas, Startup & any ytpe of confarence.
+  Description: Code-castle is a Creative HTML5 Template for Saas, Startup & any ytpe of confarence.
   Version: 1.0.0
-  Tags: app, moviedom E-media, app landing page, app showcase template, application services, gradient color, landing, marketing, responsive template, seo, software, Software Services, startup, tech, web application landing page.
+  Tags: app, Code-castle E-media, app landing page, app showcase template, application services, gradient color, landing, marketing, responsive template, seo, software, Software Services, startup, tech, web application landing page.
 ---------------------------------------->
 */
 /*
@@ -605,6 +605,43 @@ form .input-sellect select {
   opacity: 1;
 }
 
+.round-shape {
+  width: 80px;
+  height: 80px;
+  left: -7px;
+  top: -7px;
+  background: url(../../assets/images/client/round.png) no-repeat;
+}
+
+.testimonial-pagination {
+  text-align: center;
+  margin-top: 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.testimonial-pagination span {
+  margin: 3px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  position: relative;
+}
+
+.testimonial-pagination span::after {
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: #6af2f0;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /*======= all scrollbar css =====*/
 ::-webkit-scrollbar-track {
   border-radius: 5px;
@@ -620,7 +657,7 @@ form .input-sellect select {
   border-radius: 5px;
 }
 
-header .header-sticky .header-item, header .header-sticky .header-item .logo-area, header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list, header .header-sticky .header-item .user-item .item-list, .page-breadcamp .breadcamp-content ul.bread-menu, .porduct-view .pagination-area .pagination, .social-slide .socail-content ul.socail-list {
+header .header-sticky .header-item, header .header-sticky .header-item .logo-area, header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list, header .header-sticky .header-item .user-item .item-list, .page-breadcamp .breadcamp-content ul.bread-menu, .porduct-view .pagination-area .pagination, .testimonial-section .testimonial-slider .post-item .post-inner .post-header, .testimonial-section .testimonial-slider .post-item .post-inner .post-body ul, .social-slide .socail-content ul.socail-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,13 +665,13 @@ header .header-sticky .header-item, header .header-sticky .header-item .logo-are
       flex-wrap: wrap;
 }
 
-.section-header .tilt-bar .tilt-bar-bg::before, .service-area .section-wrapper .casle_flipbox .casle_flipbox_back::before, .porduct-view .primary-sidebar .sidebar-widget h5.section-title::after, .porduct-view .primary-sidebar .sidebar-widget h5.section-title::before {
+.section-header .tilt-bar .tilt-bar-bg::before, .round-shape, .testimonial-pagination span::after, .service-area .section-wrapper .casle_flipbox .casle_flipbox_back::before, .porduct-view .primary-sidebar .sidebar-widget h5.section-title::after, .porduct-view .primary-sidebar .sidebar-widget h5.section-title::before, .testimonial-section .testimonial-slider .post-item .post-inner .post-body:after {
   position: absolute;
   content: "";
 }
 
 header .header-sticky.menu-fixed, .porduct-view .primary-sidebar .sidebar-widget, .porduct-view .widget-category-2 ul li:hover, .porduct-view .shop-title, .porduct-view .product-wrap .product-item,
-.porduct-view .product-wrap .product-list-item, .social-slide {
+.porduct-view .product-wrap .product-list-item, .testimonial-section .testimonial-slider .post-item .post-inner, .social-slide {
   -webkit-box-shadow: 0px 1px 15px rgba(51, 73, 167, 0.19);
           box-shadow: 0px 1px 15px rgba(51, 73, 167, 0.19);
 }
@@ -670,6 +707,36 @@ header .header-sticky.menu-fixed, .porduct-view .primary-sidebar .sidebar-widget
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -1554,29 +1621,28 @@ header .header-sticky.style-one {
 }
 
 .page-breadcamp {
-  min-height: 150px;
+  min-height: 200px;
   /* background-size: 120% 60%; */
   background-repeat: no-repeat;
-  background-image: url(../../assets/images/banner/view-bg.jpg);
+  background-image: url(../../assets/images/carrer/bredcam.jpg);
 }
 
 @media (min-width: 576px) {
   .page-breadcamp {
-    min-height: 200px;
-    background-size: 100% 110%;
+    min-height: 300px;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
   }
 }
 
 .page-breadcamp .breadcamp-content {
-  line-height: 150px;
+  line-height: 200px;
   vertical-align: middle;
 }
 
 @media (min-width: 576px) {
   .page-breadcamp .breadcamp-content {
-    line-height: 200px;
+    line-height: 300px;
   }
 }
 
@@ -2885,6 +2951,124 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   color: #fff;
 }
 
+.testimonial-section {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .testimonial-section {
+    background-position: center right;
+  }
+}
+
+.testimonial-section .testimonial-slider {
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.testimonial-section .testimonial-slider .swiper-wrapper .swiper-slide.swiper-slide-active .post-item .post-inner .round-shape {
+  -webkit-animation: round 4s linear infinite forwards;
+          animation: round 4s linear infinite forwards;
+}
+
+.testimonial-section .testimonial-slider .post-item {
+  padding: 15px;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner {
+  border-radius: 6px;
+  background: #fff;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header, .testimonial-section .testimonial-slider .post-item .post-inner .post-body {
+  padding: 30px 10px;
+}
+
+@media (min-width: 992px) {
+  .testimonial-section .testimonial-slider .post-item .post-inner .post-header, .testimonial-section .testimonial-slider .post-item .post-inner .post-body {
+    padding: 30px;
+  }
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #059dc0;
+}
+
+@media screen and (max-width: 400px) {
+  .testimonial-section .testimonial-slider .post-item .post-inner .post-header {
+    padding: 30px;
+  }
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header p {
+  margin: 0;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header h5 {
+  margin: 0;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header .post-thumb {
+  position: relative;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header .post-thumb img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(91, 175, 231, 0.4);
+          box-shadow: 0px 10px 10px 0px rgba(91, 175, 231, 0.4);
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-header .sponsor-thumb {
+  width: 90px;
+  height: auto;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .testimonial-section .testimonial-slider .post-item .post-inner .post-header .sponsor-thumb {
+    display: none;
+  }
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-body {
+  position: relative;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-body ul li {
+  padding: 0 1px 0 0;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-body ul li i {
+  color: #ffcf34;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner .post-body:after {
+  bottom: 20px;
+  right: 30px;
+  width: 60px;
+  height: 40px;
+  background: url(../../assets/images/client/quote-right-svgrepo-com.svg) no-repeat;
+  background-size: contain;
+}
+
+.testimonial-section .testimonial-slider .post-item .post-inner:hover .round-shape {
+  -webkit-animation: round 4s linear infinite forwards;
+          animation: round 4s linear infinite forwards;
+}
+
+.testimonial-section .testimonial-slider .testimonial-pagination {
+  margin-top: 30px;
+}
+
 .modals {
   position: fixed;
   top: 0;
@@ -3251,7 +3435,7 @@ button.social-sidebar-trigger span svg {
 
 .popup-newsletter-wrap .popup-newsletter .newsletter-img img {
   height: 350px;
-  width: 100%;
+  width: 400px;
   border-radius: 6px 6px 0 0;
 }
 

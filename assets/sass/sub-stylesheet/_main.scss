@@ -1130,6 +1130,108 @@ footer {
 }
 //?=== product page css ends  ===?//
 
+//?=== client say css start ===?//
+.testimonial-section {
+	background-repeat: no-repeat;
+	background-position: center;
+    @include breakpoint(xl) {
+        background-position: center right;
+    }
+	.testimonial-slider {
+		padding-top: 40px;
+    overflow: hidden;
+    .swiper-wrapper {
+      .swiper-slide {
+        &.swiper-slide-active {
+          .post-item {
+            .post-inner {
+              .round-shape {
+                  animation: round 4s linear infinite forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+		.post-item {
+			padding: 15px;
+			.post-inner {
+        @extend %shadow;
+        border-radius: 6px;
+				background: $white-color;
+				.post-header, .post-body {
+					padding: 30px 10px;
+					@include breakpoint(lg) {
+						padding: 30px;
+					}
+				}
+				.post-header {
+					align-items: center;
+					justify-content: space-between;
+					border-bottom: 1px solid $theme-color;
+					@extend %flex;
+					@media screen and (max-width: 400px){
+						padding: 30px;
+					}
+					p {
+						margin: 0;
+					}
+					h5 {
+						margin: 0;
+					}
+					.post-thumb {
+						position: relative;
+						img {
+							width: 60px;
+						    height: 60px;
+						    border-radius: 100%;
+						    box-shadow: 0px 10px 10px 0px rgba(91, 175, 231, .40);
+						}
+					}
+					.sponsor-thumb {
+						width: 90px;
+						height: auto;
+						@include border-radius(0);
+						@media screen and (max-width: 400px){
+							display: none;
+						}
+					}
+				}
+				.post-body {
+					position: relative;
+					ul {
+						@extend %flex;
+						li {
+							padding: 0 1px 0 0;
+							i {
+								color: #ffcf34 ;
+							}
+						}
+					}
+					&:after {
+						bottom: 20px;
+						right: 30px ;
+						width: 60px;
+						height: 40px;
+						background: url(../../assets/images/client/quote-right-svgrepo-com.svg) no-repeat;
+    					background-size: contain;
+						@extend %absolute;		
+					}
+				}
+				&:hover {
+					.round-shape {
+    					animation: round 4s linear infinite forwards;
+					}
+				}
+			}
+		}
+		.testimonial-pagination {
+			margin-top: 30px;
+		}
+	}
+}
+//?=== client say css ends  ===?//
+
 // quick view modal css
 .modals {
   position: fixed;
@@ -1450,7 +1552,7 @@ button.social-sidebar-trigger {
     .newsletter-img {
       img {
         height: 350px;
-        width: 100%;
+        width: 400px;
         border-radius: 6px 6px 0 0;
         @include breakpoint(lg) {
           height: 300px;

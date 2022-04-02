@@ -243,92 +243,30 @@
     },
   });
 
-  // new arrival slider
-  var swiper = new Swiper(".new-arrival-slider", {
-    slidesPerView: 1.5,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+  //testimonial Slider
+  var swiper = new Swiper(".testimonial-slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
     },
     breakpoints: {
-      640: {
-        slidesPerView: 2,
-      },
-      768: {
+      1024: {
         slidesPerView: 3,
       },
-      1024: {
-        slidesPerView: 3.5,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-      1440: {
-        slidesPerView: 5,
-      },
-    },
-  });
-
-  // popular category slider
-  var swiper = new Swiper(".category-slider", {
-    slidesPerView: 1.5,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      640: {
+      767: {
         slidesPerView: 2,
       },
-      768: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 3.5,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-      1440: {
-        slidesPerView: 5,
-      },
     },
+    pagination: {
+      el: ".testimonial-pagination",
+      clickable: true,
+    },
+    loop: true,
   });
-
-  //product details slider
-  var galleryThumbs = new Swiper(".gallery-thumbs", {
-    spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      575: {
-        slidesPerView: 5,
-      },
-    },
-  });
-  var galleryTop = new Swiper(".gallery-top", {
-    spaceBetween: 10,
-    autoplay: true,
-    navigation: {
-      nextEl: ".product-button-next",
-      prevEl: ".product-button-prev",
-    },
-    thumbs: {
-      swiper: galleryThumbs,
-    },
-  });
-
-  // quick view slider js
-  var swiper = new Swiper(".quick-slider-js", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  F;
 
   // product view mode change js
   $(".product-view-mode").on("click", "a", function (e) {
