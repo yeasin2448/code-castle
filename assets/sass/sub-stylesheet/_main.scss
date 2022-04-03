@@ -1132,13 +1132,13 @@ footer {
 
 //?=== client say css start ===?//
 .testimonial-section {
-	background-repeat: no-repeat;
-	background-position: center;
-    @include breakpoint(xl) {
-        background-position: center right;
-    }
-	.testimonial-slider {
-		padding-top: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include breakpoint(xl) {
+    background-position: center right;
+  }
+  .testimonial-slider {
+    padding-top: 40px;
     overflow: hidden;
     .swiper-wrapper {
       .swiper-slide {
@@ -1146,103 +1146,306 @@ footer {
           .post-item {
             .post-inner {
               .round-shape {
-                  animation: round 4s linear infinite forwards;
+                animation: round 4s linear infinite forwards;
               }
             }
           }
         }
       }
     }
-		.post-item {
-			padding: 15px;
-			.post-inner {
+    .post-item {
+      padding: 15px;
+      .post-inner {
         @extend %shadow;
         border-radius: 6px;
-				background: $white-color;
-				.post-header, .post-body {
-					padding: 30px 10px;
-					@include breakpoint(lg) {
-						padding: 30px;
-					}
-				}
-				.post-header {
-					align-items: center;
-					justify-content: space-between;
-					border-bottom: 1px solid $theme-color;
-					@extend %flex;
-					@media screen and (max-width: 400px){
-						padding: 30px;
-					}
-					p {
-						margin: 0;
-					}
-					h5 {
-						margin: 0;
-					}
-					.post-thumb {
-						position: relative;
-						img {
-							width: 60px;
-						    height: 60px;
-						    border-radius: 100%;
-						    box-shadow: 0px 10px 10px 0px rgba(91, 175, 231, .40);
-						}
-					}
-					.sponsor-thumb {
-						width: 90px;
-						height: auto;
-						@include border-radius(0);
-						@media screen and (max-width: 400px){
-							display: none;
-						}
-					}
-				}
-				.post-body {
-					position: relative;
-					ul {
-						@extend %flex;
-						li {
-							padding: 0 1px 0 0;
-							i {
-								color: #ffcf34 ;
-							}
-						}
-					}
-					&:after {
-						bottom: 20px;
-						right: 30px ;
-						width: 60px;
-						height: 40px;
-						background: url(../../assets/images/client/quote-right-svgrepo-com.svg) no-repeat;
-    					background-size: contain;
-						@extend %absolute;		
-					}
-				}
-				&:hover {
-					.round-shape {
-    					animation: round 4s linear infinite forwards;
-					}
-				}
-			}
-		}
-		.testimonial-pagination {
-			margin-top: 30px;
-		}
-	}
+        background: $white-color;
+        .post-header,
+        .post-body {
+          padding: 30px 10px;
+          @include breakpoint(lg) {
+            padding: 30px;
+          }
+        }
+        .post-header {
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid $theme-color;
+          @extend %flex;
+          @media screen and (max-width: 400px) {
+            padding: 30px;
+          }
+          p {
+            margin: 0;
+          }
+          h5 {
+            margin: 0;
+          }
+          .post-thumb {
+            position: relative;
+            img {
+              width: 60px;
+              height: 60px;
+              border-radius: 100%;
+              box-shadow: 0px 10px 10px 0px rgba(91, 175, 231, 0.4);
+            }
+          }
+          .sponsor-thumb {
+            width: 90px;
+            height: auto;
+            @include border-radius(0);
+            @media screen and (max-width: 400px) {
+              display: none;
+            }
+          }
+        }
+        .post-body {
+          position: relative;
+          ul {
+            @extend %flex;
+            li {
+              padding: 0 1px 0 0;
+              i {
+                color: #ffcf34;
+              }
+            }
+          }
+          &:after {
+            bottom: 20px;
+            right: 30px;
+            width: 60px;
+            height: 40px;
+            background: url(../../assets/images/client/quote-right-svgrepo-com.svg)
+              no-repeat;
+            background-size: contain;
+            @extend %absolute;
+          }
+        }
+        &:hover {
+          .round-shape {
+            animation: round 4s linear infinite forwards;
+          }
+        }
+      }
+    }
+    .testimonial-pagination {
+      margin-top: 30px;
+    }
+  }
 }
 //?=== client say css ends  ===?//
 
 //?=== circular css start ===?//
-.circular-area{
+.job-area {
   padding: 60px 0;
   .section-wrapper {
-    .search-header {
+    .search-filtter {
       form {
         .input-group {
           input {
             height: 36px;
             width: 100%;
+            padding: 12px;
             background: $white-color;
+            box-shadow: 0px 1px 7px rgba(46, 49, 146, 0.13);
+            &::placeholder {
+              border: 0;
+              font-size: 14px;
+            }
+          }
+          select.custom-select {
+            width: 100%;
+          }
+        }
+        .filtter-btn {
+          button.btn {
+            width: 100%;
+            border-radius: 6px;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .job-list {
+      .job-title {
+        h3 {
+          margin: 0;
+        }
+      }
+      .list-item {
+        position: relative;
+        .brows-job-list {
+          display: block;
+          text-align: center;
+          width: 100%;
+          clear: both;
+          padding: 20px;
+          transition: 0.4s;
+          margin-top: 25px;
+          background: #fff;
+          border-radius: 6px;
+          box-shadow: 0 0 10px 0 rgba(88, 96, 109, 0.14);
+          -webkit-box-shadow: 0 0 10px 0 rgba(88, 96, 109, 0.14);
+          -moz-box-shadow: 0 0 10px 0 rgba(88, 96, 109, 0.14);
+          @include breakpoint (md) {
+            display: flex;
+            justify-content: space-between;
+          }
+          align-items: center;
+          .item-fl-box {
+            width: 100%;
+            display: block;
+            @include breakpoint (md) {
+              display: flex;
+              text-align: left;
+              align-items: center;
+            }
+            .brows-job-company-img {
+              margin: 0;
+              margin-right: 15px;
+              display: table;
+            }
+            .brows-job-company-img {
+              width: 75px;
+              height: 75px;
+              display: inline-block;
+              background: #f4f5f7;
+              vertical-align: middle;
+              border-radius: 50%;
+              line-height: 75px;
+              img {
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+                display: inline-block;
+              }
+            }
+            .brows-job-position {
+              padding: 0;
+              h3 {
+                font-size: 17px;
+                padding: 0;
+                margin-bottom: 5px;
+                line-height: 1.4;
+                position: relative;
+                width: auto;
+                display: inline-block;
+                a {
+                  font-weight: 500;
+                }
+              }
+              p {
+                span {
+                  margin-top: 12px;
+                }
+                .brows-job-sallery {
+                  margin-right: 0;
+                  i {
+                    margin-right: 10px;
+                  }
+                }
+                .job-type {
+                  padding: 3px 12px;
+                  color: #11b719;
+                  margin-left: 10px;
+                  border-radius: 2px;
+                  text-transform: capitalize;
+                  font-size: 13px;
+                  &.bg-trans-success {
+                    background: rgba(15, 183, 107, 0.12) !important;
+                  }
+                }
+              }
+            }
+          }
+          .brows-job-location {
+            margin-top: 23px;
+            p {
+              font-size: 18px;
+              i {
+                font-size: 16px;
+                margin-right: 10px;
+              }
+            }
+          }
+          .brows-job-sallery {
+            margin-left: 15px;
+          }
+        }
+        .brows-job-link {
+          a.applyBtn {
+            font-size: 14px;
+            padding: 14px 20px;
+            letter-spacing: 0.5px;
+            text-shadow: none;
+            border-radius: 6px;
+            position: relative;
+            border-left: 2px solid $theme-color;
+            box-shadow: 0 2px 8px rgba(102, 103, 107, 0.15);
+            span {
+              color: #000;
+              font-size: 14px;
+              z-index: 1;
+              position: relative;
+              transition: all 0.3s ease-in-out;
+              @include breakpoint (md) {
+                font-size: 12px;
+              }
+              @include breakpoint (lg) {
+                font-size: 14px;
+              }
+            }
+            &:hover {
+              &::before {
+                width: 100%;
+              }
+              span {
+                color: $white-color;
+              }
+            }
+            &::before {
+              @extend %absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 100%;
+              border-radius: 6px;
+              background-color: $theme-color;
+              -webkit-transition: 0.4s;
+              transition: 0.4s;
+            }
+          }
+        }
+        .tg-themetag {
+          top: 7px;
+          left: -5px;
+          z-index: 2;
+          color: #fff;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 10px;
+          position: absolute;
+          background: #ff526c;
+          padding: 5px 3px 3px 10px;
+          text-transform: uppercase;
+          &::before {
+            @extend %absolute;
+            height: 0;
+            width: 0;
+            top: 0;
+            left: 100%;
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-left: 10px solid #ff526c;
+          }
+          &::after {
+            @extend %absolute;
+            height: 0;
+            width: 0;
+            top: 100%;
+            left: 0;
+            border-top: 5px solid #eb344f;
+            border-left: 5px solid transparent;
           }
         }
       }
@@ -1389,13 +1592,13 @@ button.social-sidebar-trigger {
   width: 40px;
   z-index: 111;
   padding: 12px 14px 12px 12px;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
   white-space: nowrap;
   display: flex;
   text-align: flex-start;
   flex-direction: column;
   background: $theme-color;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   span {
     &.btn-text {
       font-size: 14px;

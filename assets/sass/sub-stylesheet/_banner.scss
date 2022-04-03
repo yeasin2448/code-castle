@@ -55,12 +55,11 @@
 //?=== page header css start ===?//
 .page-breadcamp {
   min-height: 200px;
-  /* background-size: 120% 60%; */
   background-repeat: no-repeat;
   background-image: url(../../assets/images/carrer/bredcam.jpg);
   @include breakpoint(sm) {
     min-height: 300px;
-    // background-size: 100% 110%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
