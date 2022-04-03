@@ -145,29 +145,6 @@
     }
   );
 
-  //#  image loaded hear  #//
-  $(".container").imagesLoaded(function () {
-    $(".portfolio-menu").on("click", ".button", function () {
-      var filterValue = $(this).attr("data-filter");
-      $grid.isotope({ filter: filterValue });
-    });
-    // change is-checked class on buttons
-    $(".button-group").each(function (i, buttonGroup) {
-      var $buttonGroup = $(buttonGroup);
-      $buttonGroup.on("click", ".button", function () {
-        $buttonGroup.find(".is-checked").removeClass("is-checked");
-        $(this).addClass("is-checked");
-      });
-    });
-    var $grid = $(".grid").isotope({
-      itemSelector: ".grid-item",
-      percentPosition: true,
-      masonry: {
-        columnWidth: 1,
-      },
-    });
-  });
-
   // chate button
   $(document).on("click", ".media-btn, .media-close", function () {
     $(".social-media").toggleClass("open");
@@ -179,20 +156,6 @@
   //     delay: .6,
   //     transition: 'cubic-bezier(0,0,0,1)'
   // });
-
-  // watching slider padd remove
-  $(document).ready(function () {
-    $("#paddRemove").on("click", function () {
-      // $('.padding-remove').animate({
-      //   paddingLeft : '0'
-      // })
-      setTimeout(function () {
-        $(".padding-remove").animate({
-          paddingLeft: "0",
-        });
-      }, 1);
-    });
-  });
 
   // lightcase activation//
   // $('a[data-rel^=lightcase]').lightcase();
@@ -222,7 +185,7 @@
     },
   });
 
-  // banner slider js
+  // fasion slider js
   var swiper = new Swiper(".fasion-slider", {
     effect: "creative",
     creativeEffect: {
@@ -266,7 +229,6 @@
     },
     loop: true,
   });
-  F;
 
   // product view mode change js
   $(".product-view-mode").on("click", "a", function (e) {

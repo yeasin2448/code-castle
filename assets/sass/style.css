@@ -3069,6 +3069,16 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   margin-top: 30px;
 }
 
+.circular-area {
+  padding: 60px 0;
+}
+
+.circular-area .section-wrapper .search-header form .input-group input {
+  height: 36px;
+  width: 100%;
+  background: #fff;
+}
+
 .modals {
   position: fixed;
   top: 0;

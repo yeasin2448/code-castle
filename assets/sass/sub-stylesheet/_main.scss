@@ -1232,6 +1232,25 @@ footer {
 }
 //?=== client say css ends  ===?//
 
+//?=== circular css start ===?//
+.circular-area{
+  padding: 60px 0;
+  .section-wrapper {
+    .search-header {
+      form {
+        .input-group {
+          input {
+            height: 36px;
+            width: 100%;
+            background: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+//?=== circular css ends  ===?//
+
 // quick view modal css
 .modals {
   position: fixed;
