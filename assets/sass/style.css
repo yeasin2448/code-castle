@@ -3329,6 +3329,37 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   border-left: 5px solid transparent;
 }
 
+.office-location {
+  padding: 60px 0;
+}
+
+.office-location .section-wrapper {
+  padding-top: 40px;
+}
+
+.office-location .section-wrapper .contact-info-des {
+  background: #fff;
+  margin-top: 30px;
+  padding: 45px 20px;
+  text-align: center;
+  border-radius: 5px;
+  border-top: 3px solid #7b68ee;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.office-location .section-wrapper .contact-info-des h5 {
+  margin: 0;
+}
+
+.office-location .section-wrapper .contact-info-des p {
+  margin: 0;
+}
+
+.office-location .section-wrapper .contact-info-des a {
+  text-decoration: none;
+}
+
 .modals {
   position: fixed;
   top: 0;
