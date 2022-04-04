@@ -89,7 +89,7 @@
     text-align: center;
     background-size: cover;
     background-position: center;
-    background-image: url(../../assets/images/banner/room-bg.jpg);
+    background-image: url(../../assets/images/about/page-title-bg.jpeg);
     h2 {
       margin: 0;
       font-weight: 600;
@@ -100,15 +100,11 @@
       line-height: normal;
       min-height: 300px;
       display: flex;
-      justify-content: center;
       align-items: center;
       ul.bread-menu {
-        justify-content: center;
         li {
           margin: 0 6px;
           a {
-            border: 0.5px dashed;
-            border-radius: 25px;
             transition: all 0.3s ease-in-out;
             &:hover,
             &.active {

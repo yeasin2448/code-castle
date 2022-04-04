@@ -1666,7 +1666,7 @@ header .header-sticky.style-one {
   text-align: center;
   background-size: cover;
   background-position: center;
-  background-image: url(../../assets/images/banner/room-bg.jpg);
+  background-image: url(../../assets/images/about/page-title-bg.jpeg);
 }
 
 .page-breadcamp.style-one h2 {
@@ -1682,18 +1682,9 @@ header .header-sticky.style-one {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.page-breadcamp.style-one .breadcamp-content ul.bread-menu {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .page-breadcamp.style-one .breadcamp-content ul.bread-menu li {
@@ -1701,8 +1692,6 @@ header .header-sticky.style-one {
 }
 
 .page-breadcamp.style-one .breadcamp-content ul.bread-menu li a {
-  border: 0.5px dashed;
-  border-radius: 25px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
