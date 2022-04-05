@@ -1286,7 +1286,7 @@ footer {
           box-shadow: 0 0 10px 0 rgba(88, 96, 109, 0.14);
           -webkit-box-shadow: 0 0 10px 0 rgba(88, 96, 109, 0.14);
           -moz-box-shadow: 0 0 10px 0 rgba(88, 96, 109, 0.14);
-          @include breakpoint (md) {
+          @include breakpoint(md) {
             display: flex;
             justify-content: space-between;
           }
@@ -1294,7 +1294,7 @@ footer {
           .item-fl-box {
             width: 100%;
             display: block;
-            @include breakpoint (md) {
+            @include breakpoint(md) {
               display: flex;
               text-align: left;
               align-items: center;
@@ -1388,10 +1388,10 @@ footer {
               z-index: 1;
               position: relative;
               transition: all 0.3s ease-in-out;
-              @include breakpoint (md) {
+              @include breakpoint(md) {
                 font-size: 12px;
               }
-              @include breakpoint (lg) {
+              @include breakpoint(lg) {
                 font-size: 14px;
               }
             }
@@ -1465,22 +1465,102 @@ footer {
       padding: 45px 20px;
       text-align: center;
       border-radius: 5px;
-      border-top: 3px solid #7b68ee;
-      -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, .5), 0 5px 15px rgba(0, 0, 0, .3);
-      box-shadow: 0 3px 15px rgba(0, 0, 0, .5), 0 5px 15px rgba(0, 0, 0, .3);
+      position: relative;
+      border-top: 2px solid $theme-color;
+      box-shadow: 0px 1px 11px rgba(51, 73, 167, 0.13);
       h5 {
         margin: 0;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
       }
       p {
         margin: 0;
+        font-size: 15px;
+        color: #5f5f5f;
+        font-weight: 400;
+        margin-bottom: 12px;
       }
       a {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        display: block;
+        line-height: 1.5;
         text-decoration: none;
       }
     }
   }
 }
 //?=== office location css ends  ===?//
+
+//? === contact area start ===?//
+.contacts-area {
+  padding: 60px 0;
+  background: #fafbfc;
+  .section-wrapper {
+    padding-top: 40px;
+    form {
+      margin: 0 auto;
+      max-width: 800px;
+      .input-group {
+        input {
+          border: 0;
+          height: 44px;
+          border-radius: 4px;
+          box-shadow: 0px 1px 7px rgba(46, 49, 146, 0.13);
+          &::placeholder {
+            font-size: 14px;
+            color: #333;
+          }
+        }
+      }
+      .input-btn {
+        margin-top: 30px;
+        button.btn {
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+//? === contact area ends  ===?//
+
+//?=== pricing page css start ===?//
+.pricing-section {
+  padding: 60px 0;
+  .pricing-tabs {
+    padding-top: 40px;
+    position: relative;
+    z-index: 2;
+    .tab {
+      position: relative;
+      display: none;
+      &.active-tab {
+        display: block;
+        .price-block {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+    .tab-content {
+      .price-block {
+        position: relative;
+        margin-bottom: 30px;
+        transition: all 900ms ease;
+        -moz-transition: all 900ms ease;
+        -webkit-transition: all 900ms ease;
+        -ms-transition: all 900ms ease;
+        -o-transition: all 900ms ease;
+      }
+    }
+    .price-block {
+      transform: rotateY(90deg);
+    }
+  }
+}
+//?=== pricing page css ends  ===?//
 
 // quick view modal css
 .modals {

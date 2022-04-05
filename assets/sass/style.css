@@ -294,7 +294,7 @@ button.btn {
 .section-header .tilt-bar {
   height: 2px;
   margin: 0 auto 5px;
-  width: 62px;
+  width: 90px;
 }
 
 .section-header .tilt-bar .tilt-bar-bg {
@@ -449,9 +449,9 @@ form .input-group input.form-control::placeholder {
 }
 
 form .input-group input.form-control:focus {
-  border: 1px solid #000;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border: 1px solid #059dc0;
 }
 
 form .input-group input.form-control:focus::-webkit-input-placeholder {
@@ -3343,21 +3343,124 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   padding: 45px 20px;
   text-align: center;
   border-radius: 5px;
-  border-top: 3px solid #7b68ee;
-  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-top: 2px solid #059dc0;
+  -webkit-box-shadow: 0px 1px 11px rgba(51, 73, 167, 0.13);
+          box-shadow: 0px 1px 11px rgba(51, 73, 167, 0.13);
 }
 
 .office-location .section-wrapper .contact-info-des h5 {
   margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .office-location .section-wrapper .contact-info-des p {
   margin: 0;
+  font-size: 15px;
+  color: #5f5f5f;
+  font-weight: 400;
+  margin-bottom: 12px;
 }
 
 .office-location .section-wrapper .contact-info-des a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  display: block;
+  line-height: 1.5;
   text-decoration: none;
+}
+
+.contacts-area {
+  padding: 60px 0;
+  background: #fafbfc;
+}
+
+.contacts-area .section-wrapper {
+  padding-top: 40px;
+}
+
+.contacts-area .section-wrapper form {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.contacts-area .section-wrapper form .input-group input {
+  border: 0;
+  height: 44px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 7px rgba(46, 49, 146, 0.13);
+          box-shadow: 0px 1px 7px rgba(46, 49, 146, 0.13);
+}
+
+.contacts-area .section-wrapper form .input-group input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #333;
+}
+
+.contacts-area .section-wrapper form .input-group input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #333;
+}
+
+.contacts-area .section-wrapper form .input-group input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #333;
+}
+
+.contacts-area .section-wrapper form .input-group input::placeholder {
+  font-size: 14px;
+  color: #333;
+}
+
+.contacts-area .section-wrapper form .input-btn {
+  margin-top: 30px;
+}
+
+.contacts-area .section-wrapper form .input-btn button.btn {
+  border-radius: 6px;
+}
+
+.pricing-section {
+  padding: 60px 0;
+}
+
+.pricing-section .pricing-tabs {
+  padding-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-section .pricing-tabs .tab {
+  position: relative;
+  display: none;
+}
+
+.pricing-section .pricing-tabs .tab.active-tab {
+  display: block;
+}
+
+.pricing-section .pricing-tabs .tab.active-tab .price-block {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.pricing-section .pricing-tabs .tab-content .price-block {
+  position: relative;
+  margin-bottom: 30px;
+  transition: all 900ms ease;
+  -moz-transition: all 900ms ease;
+  -webkit-transition: all 900ms ease;
+  -ms-transition: all 900ms ease;
+  -o-transition: all 900ms ease;
+}
+
+.pricing-section .pricing-tabs .price-block {
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
 }
 
 .modals {
