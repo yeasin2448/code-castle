@@ -3444,11 +3444,11 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 }
 
 .pricing-section .pricing-tabs .tab.active-tab .price-block {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg) !important;
+          transform: rotateY(0deg) !important;
 }
 
-.pricing-section .pricing-tabs .tab-content .price-block {
+.pricing-section .pricing-tabs .price-block {
   position: relative;
   margin-bottom: 30px;
   transition: all 900ms ease;
@@ -3456,11 +3456,248 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   -webkit-transition: all 900ms ease;
   -ms-transition: all 900ms ease;
   -o-transition: all 900ms ease;
-}
-
-.pricing-section .pricing-tabs .price-block {
   -webkit-transform: rotateY(90deg);
           transform: rotateY(90deg);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box {
+  position: relative;
+  text-align: center;
+  padding: 50px 45px 85px;
+  border-radius: 9px;
+  overflow: hidden;
+  border: 1px solid #4660dd;
+  background-color: #ffffff;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .title {
+  position: relative;
+  font-size: 16px;
+  color: #ffffff;
+  z-index: 1;
+  font-weight: 500;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 10px 30px;
+  background: #ff0300;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#059dc0), to(#6af2f0));
+  background: linear-gradient(to right, #059dc0, #6af2f0);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .price {
+  position: relative;
+  font-size: 48px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1em;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bbbbbb;
+  font-family: "Poppins", sans-serif;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box ul.price-list {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box ul.price-list li {
+  position: relative;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box ul.price-list li:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn:hover {
+  color: #fff;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn:hover.btn-style-six .txt {
+  color: #fff;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn.btn-style-five {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 14px 44px;
+  font-weight: 400;
+  overflow: hidden;
+  border-radius: 6px;
+  overflow: hidden;
+  text-transform: capitalize;
+  background: #6917b4;
+  background: -webkit-gradient(linear, left top, right top, from(#6917b4), to(#d54be1));
+  background: linear-gradient(to right, #6917b4 0%, #d54be1 100%);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn.btn-style-five::before {
+  background: #6917b4;
+  background: -webkit-gradient(linear, right top, left top, from(#6917b4), to(#d54be1));
+  background: linear-gradient(to left, #6917b4 0%, #d54be1 100%);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn.btn-style-six {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 30px;
+  color: #6615b3;
+  padding: 14px 44px;
+  font-weight: 400;
+  overflow: hidden;
+  border-radius: 6px;
+  overflow: hidden;
+  text-transform: capitalize;
+  background: #ffffff;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn.btn-style-six::before {
+  background: #6917b4;
+  background: -webkit-gradient(linear, right top, left top, from(#6917b4), to(#d54be1));
+  background: linear-gradient(to left, #6917b4 0%, #d54be1 100%);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn.btn-style-three {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 14px 44px;
+  font-weight: 400;
+  overflow: hidden;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ea3368;
+  text-transform: capitalize;
+  background: -webkit-gradient(linear, left top, right top, from(#ea3368), to(#fd8b56));
+  background: linear-gradient(to right, #ea3368 0%, #fd8b56 100%);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn.btn-style-three::before {
+  background: #ea3368;
+  background: -webkit-gradient(linear, right top, left top, from(#ea3368), to(#fd8b56));
+  background: linear-gradient(to left, #ea3368 0%, #fd8b56 100%);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scale(0.2, 1);
+  transform: scale(0.2, 1);
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .theme-btn .txt {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-section .pricing-tabs .price-block .inner-box .price-pattern-layer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 44px;
+  -webkit-animation: 35s linear 0s infinite normal none running slide;
+          animation: 35s linear 0s infinite normal none running slide;
+}
+
+.pricing-section .pricing-tabs .price-block.active .inner-box {
+  border: none;
+  background: #151ab2;
+  background: -moz-linear-gradient(to right, #2fd3badb 0%, #3ba9c7 100%);
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
+  background: -webkit-gradient(linear, left top, right top, from(#2fd3badb), to(#3ba9c7));
+  background: linear-gradient(to right, #2fd3badb 0%, #3ba9c7 100%);
+}
+
+.pricing-section .pricing-tabs .price-block.active .inner-box .price {
+  color: #fff;
+}
+
+.pricing-section .pricing-tabs .price-block.active .inner-box .price-list li {
+  color: #fff;
+}
+
+.pricing-section .buttons-outer {
+  text-align: center;
+}
+
+.pricing-section .tab-buttons {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-section .tab-buttons .tab-btn {
+  position: relative;
+  color: #777777;
+  font-size: 18px;
+  font-weight: 400;
+  float: left;
+  cursor: pointer;
+  padding: 16px 48px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.pricing-section .tab-buttons .tab-btn.active-btn {
+  color: #ffffff;
+  background: #ff0300;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0300), to(#ff8f00));
+  background: linear-gradient(to right, #ff0300 0%, #ff8f00 100%);
+}
+
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 3000px 0;
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 3000px 0;
+  }
 }
 
 .modals {
