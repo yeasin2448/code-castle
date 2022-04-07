@@ -230,6 +230,33 @@
     loop: true,
   });
 
+  // service details js
+  var swiper = new Swiper(".service-slider", {
+    slidesPerView: 1.5,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
   // product view mode change js
   $(".product-view-mode").on("click", "a", function (e) {
     e.preventDefault();

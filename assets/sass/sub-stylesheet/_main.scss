@@ -1540,19 +1540,19 @@ footer {
       &.active-tab {
         display: block;
         .price-block {
-          transform: rotateY(0deg)!important;
+          transform: rotateY(0deg) !important;
         }
       }
     }
     .price-block {
-        position: relative;
-        margin-bottom: 30px;
-        transition: all 900ms ease;
-        -moz-transition: all 900ms ease;
-        -webkit-transition: all 900ms ease;
-        -ms-transition: all 900ms ease;
-        -o-transition: all 900ms ease;
-        transform: rotateY(90deg);
+      position: relative;
+      margin-bottom: 30px;
+      transition: all 900ms ease;
+      -moz-transition: all 900ms ease;
+      -webkit-transition: all 900ms ease;
+      -ms-transition: all 900ms ease;
+      -o-transition: all 900ms ease;
+      transform: rotateY(90deg);
       .inner-box {
         position: relative;
         text-align: center;
@@ -1810,6 +1810,109 @@ footer {
     }
   }
 }
+//?=== pricing page css ends  ===?//
+
+//?=== service details start ===?//
+.service-details {
+  padding: 60px 0;
+  .section-wrapper {
+    padding-top: 40px;
+    .service-slider {
+      overflow: x;
+      .swiper-wrapper {
+        .swiper-slide {
+          .service-thumb {
+            position: relative;
+            &:hover {
+              .thumb-text {
+                bottom: 10px;
+                h4 {
+                  opacity: 1;
+                  visibility: visible;
+                  transform: translateY(0px);
+                  transition-delay: 0.3s;
+                }
+                button.btn {
+                  opacity: 1;
+                  visibility: visible;
+                  transform: translateY(0px);
+                  transition-delay: 0.3s;
+                }
+              }
+            }
+            img {
+              border-radius: 6px;
+            }
+            .thumb-text {
+              position: absolute;
+              bottom: -200px;
+              left: 50%;
+              padding: 12px;
+              width: calc(100% - 10%);
+              border-radius: 6px;
+              background: #fff;
+              transform: translateX(-50%);
+              -webkit-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              h4 {
+                margin: 0;
+                color: #000;
+                font-weight: 500;
+                padding-bottom: 6px;
+                opacity: 0;
+                visibility: hidden;
+                -webkit-transform: translateX(-15px);
+                transform: translateX(-15px);
+                transition: all .3s ease-in-out;
+              }
+              button.btn {
+                border-radius: 6px;
+                opacity: 0;
+                visibility: hidden;
+                -webkit-transform: translateX(15px);
+                transform: translateX(15px);
+                transition: all .3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+    .service-steps {
+      padding-top: 40px;
+      h3 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 26px;
+        padding-bottom: 12px;
+      }
+      .step-item {
+        h4 {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        p {
+          margin: 0;
+          font-weight: 300;
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+      &.service-benefits {
+        .ben-thumb {
+          height: 500px;
+          background-size: cover;
+          background-position: center;
+          background-image: url(../../assets/images/service/service-it.avif);
+        }
+      }
+    }
+  }
+}
+//?=== service details ends  ===?//
+
 @keyframes slide {
   from {
     background-position: 0 0;

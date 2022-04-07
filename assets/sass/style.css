@@ -3682,6 +3682,118 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   background: linear-gradient(to right, #ff0300 0%, #ff8f00 100%);
 }
 
+.service-details {
+  padding: 60px 0;
+}
+
+.service-details .section-wrapper {
+  padding-top: 40px;
+}
+
+.service-details .section-wrapper .service-slider {
+  overflow: x;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb {
+  position: relative;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb:hover .thumb-text {
+  bottom: 10px;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb:hover .thumb-text h4 {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb:hover .thumb-text button.btn {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb img {
+  border-radius: 6px;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb .thumb-text {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  padding: 12px;
+  width: calc(100% - 10%);
+  border-radius: 6px;
+  background: #fff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb .thumb-text h4 {
+  margin: 0;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 6px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb .thumb-text button.btn {
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.service-details .section-wrapper .service-steps {
+  padding-top: 40px;
+}
+
+.service-details .section-wrapper .service-steps h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 26px;
+  padding-bottom: 12px;
+}
+
+.service-details .section-wrapper .service-steps .step-item h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.service-details .section-wrapper .service-steps .step-item p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.service-details .section-wrapper .service-steps .step-item p strong {
+  font-weight: 500;
+}
+
+.service-details .section-wrapper .service-steps.service-benefits .ben-thumb {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/images/service/service-it.avif);
+}
+
 @-webkit-keyframes slide {
   from {
     background-position: 0 0;
