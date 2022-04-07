@@ -3747,8 +3747,8 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   visibility: hidden;
   -webkit-transform: translateX(-15px);
   transform: translateX(-15px);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .service-details .section-wrapper .service-slider .swiper-wrapper .swiper-slide .service-thumb .thumb-text button.btn {
@@ -3757,8 +3757,8 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   visibility: hidden;
   -webkit-transform: translateX(15px);
   transform: translateX(15px);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .service-details .section-wrapper .service-steps {
@@ -3792,6 +3792,162 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   background-size: cover;
   background-position: center;
   background-image: url(../../assets/images/service/service-it.avif);
+}
+
+.job-details {
+  padding: 60px 0;
+}
+
+.job-details .card-jobs {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px 30px;
+  border: 1px solid rgba(181, 181, 181, 0.2);
+  -webkit-box-shadow: 0px 1px 11px rgba(51, 73, 167, 0.13);
+          box-shadow: 0px 1px 11px rgba(51, 73, 167, 0.13);
+}
+
+@media (min-width: 576px) {
+  .job-details .card-jobs {
+    padding: 26px 50px;
+  }
+}
+
+.job-details .card-jobs .card-jobs__content h2.card-jobs__content__heading {
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .job-details .card-jobs .card-jobs__content h2.card-jobs__content__heading {
+    font-size: 36px;
+  }
+}
+
+.job-details .card-jobs .card-jobs__content ul.card-jobs__content__details li {
+  margin-right: 12px;
+}
+
+.job-details .card-jobs .card-job__btn button.btn {
+  padding: 9px 36px;
+}
+
+@media (min-width: 992px) {
+  .job-details .career-deatils__content {
+    margin-right: 65px;
+  }
+}
+
+.job-details .career-deatils__content .career-details-box {
+  padding-top: 10px;
+}
+
+.job-details .career-deatils__content .career-details-box .btn {
+  width: 243px;
+  border-radius: 8px;
+  padding: 10px 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .job-details .career-deatils__content .career-details-box {
+    padding-top: 45px;
+  }
+}
+
+.job-details .career-deatils__content__heading {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 40px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.job-details .career-deatils__content__text {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 32px;
+  color: #000;
+}
+
+.job-details .career-deatils__content__list {
+  padding: 0;
+  margin: 0;
+}
+
+.job-details .career-deatils__content__list li {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 32px;
+  list-style: none;
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.job-details .career-deatils__content__list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #059dc0;
+}
+
+.job-details .pormo--inner-career {
+  -webkit-box-shadow: 0 44px 74px rgba(37, 55, 63, 0.1);
+          box-shadow: 0 44px 74px rgba(37, 55, 63, 0.1);
+  background-color: #e4f2f0;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.job-details .pormo--inner-career .newsletter--inner-career {
+  margin: 0 13px;
+}
+
+.job-details .pormo--inner-career .promo-content .section-title__heading {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  color: #059dc0;
+}
+
+@media (min-width: 768px) {
+  .job-details .pormo--inner-career .promo-content .section-title__heading {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .job-details .pormo--inner-career .promo-content .section-title__heading {
+    font-size: 36px;
+  }
+}
+
+.job-details .pormo--inner-career .promo-content .section-title__description {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.777777;
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 992px) {
+  .job-details .pormo--inner-career .promo-content .section-title__description {
+    font-size: 18px;
+  }
 }
 
 @-webkit-keyframes slide {
