@@ -323,5 +323,23 @@
 		});
 	}
 
+  // Porfolio isotope and filter
+  $(window).on('load', function () {
+    var projectIsotope = $('.project-grid').isotope({
+      itemSelector: '.project-grid-item',
+      percentPosition: true,
+			masonry: {
+				columnWidth: 0
+			}
+    });
+    $('#project-flters li').on('click', function () {
+      $("#project-flters li").removeClass('filter-active');
+      $(this).addClass('filter-active');
+      projectIsotope.isotope({
+        filter: $(this).data('filter')
+      });
+    });
+  });
+
 
 })(jQuery);

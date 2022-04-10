@@ -1922,14 +1922,14 @@ footer {
     padding: 30px 30px;
     border: 1px solid rgba(181, 181, 181, 0.2);
     box-shadow: 0px 1px 11px rgba(51, 73, 167, 0.13);
-    @include breakpoint (sm) {
+    @include breakpoint(sm) {
       padding: 26px 50px;
     }
     .card-jobs__content {
       h2.card-jobs__content__heading {
         margin: 0;
         font-weight: 500;
-        @include breakpoint (sm) {
+        @include breakpoint(sm) {
           font-size: 36px;
         }
       }
@@ -2042,6 +2042,280 @@ footer {
     }
   }
 }
+//?=== job details css ends  ===?//
+
+//?=== porduct area css start ===?//
+.project-area {
+  padding: 60px 0;
+  .project-list {
+    text-align: center;
+    margin-top: 25px;
+    ul.nav {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      li {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin: 6px;
+        padding: 10px 25px;
+        background-color: #fff;
+        cursor: pointer;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.15);
+        box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.15);
+        transition: all 0.4s ease 0s;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -ms-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        &.filter-active {
+          color: #fff;
+          background-color: $theme-color;
+          -moz-transition: all 0.5s ease-in-out 0s;
+          -ms-transition: all 0.5s ease-in-out 0s;
+          -o-transition: all 0.5s ease-in-out 0s;
+          -webkit-transition: all 0.5s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0s;
+        }
+      }
+    }
+  }
+  .project-grid {
+    width: 100%;
+    margin-top: 30px;
+    display: inline-block;
+    .project-grid-item {
+      width: 100%;
+      @include breakpoint(sm) {
+        width: calc(100% / 2);
+      }
+      @include breakpoint(md) {
+        width: calc(100% / 3);
+      }
+      @include breakpoint(lg) {
+        width: calc(100% / 4);
+      }
+      .project-item {
+        display: block;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 100%;
+          border-radius: 4px;
+        }
+        &:hover {
+          .item-text {
+            bottom: 10px;
+            opacity: 1;
+            visibility: visible;
+            p {
+              opacity: 1;
+              visibility: visible;
+              -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+              -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s;
+            }
+            h3 {
+              opacity: 1;
+              visibility: visible;
+              -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+              -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s;
+            }
+          }
+        }
+        .item-text {
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          bottom: -20px;
+          z-index: 2;
+          opacity: 0;
+          visibility: hidden;
+          padding: 20px 20px;
+          background-color: #fff;
+          -webkit-transition: all 0.3s ease-out 0s;
+          -o-transition: all 0.3s ease-out 0s;
+          transition: all 0.3s ease-out 0s;
+          p {
+            color: $theme-color;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+          }
+          h3 {
+            margin: 0;
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+            a {
+              text-decoration: none;
+              -webkit-transition: 0.4s;
+              transition: 0.4s;
+              outline: 0 !important;
+              color: #0b0b31;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//?=== porduct area css ends  ===?//
+
+//?=== resume area css start ===?//
+.resume-area {
+  padding: 60px 0;
+  .alert {
+    background: rgba(16, 135, 235, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+    &.alert-type-1 {
+      padding: 20px 20px 20px 30px;
+      .alert-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: -20px;
+        margin-left: -20px;
+        * {
+          display: inline-block;
+          margin-top: 0;
+          margin-bottom: 20px;
+          margin-left: 20px;
+        }
+        .alert-main {
+          max-width: 595px;
+          letter-spacing: 0.025em;
+          color: #151515;
+          @include breakpoint (md) {
+            font-size: 16px;
+            line-height: 1.5;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .block-form {
+    margin-top: 50px;
+    @include breakpoint(md) {
+      margin-top: 65px;
+    }
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    hr {
+      margin-top: 15px;
+    }
+    .acuity-form {
+      margin-top: 35px;
+      .form-wrap {
+        position: relative;
+        .form-label-outside {
+          margin-bottom: 6px;
+          color: #151515;
+          cursor: pointer;
+          font-weight: 400;
+          letter-spacing: 0.025em;
+          display: inline-block;
+          @include breakpoint(md) {
+            position: static;
+            transform: none;
+          }
+        }
+        .form-wrap-inner {
+          position: relative;
+          input.form-input {
+            display: block;
+            width: 100%;
+            min-height: 50px;
+            padding: 12px 26px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #151515;
+            background-color: #ffffff;
+            background-image: none;
+            border-radius: 0;
+            -webkit-appearance: none;
+            transition: 0.3s ease-in-out;
+            border: 1px solid #e0e0e0;
+          }
+          span.form-validation {
+            position: absolute;
+            right: 8px;
+            top: 0;
+            z-index: 11;
+            margin-top: 2px;
+            font-size: 9px;
+            font-weight: 400;
+            line-height: 12px;
+            letter-spacing: 0;
+            color: #eb6a6a;
+            transition: 0.3s;
+          }
+          .form-label {
+            position: absolute;
+            top: 13px;
+            left: 0;
+            right: 0;
+            padding-left: 26px;
+            padding-right: 26px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #151515;
+            pointer-events: none;
+            text-align: left;
+            z-index: 9;
+            transition: 0.25s;
+            will-change: transform;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+      &.form-lg {
+        .form-input {
+          min-height: 60px;
+        }
+        .form-label {
+          top: 18px;
+        }
+      }
+    }
+  }
+}
+//?=== resume area css start ===?//
 
 @keyframes slide {
   from {
