@@ -221,13 +221,19 @@ button.btn {
   }
   h3 {
     margin: 0;
-    line-height: 20px;
+    line-height: 32px;
     font-weight: 500;
     padding: 12px 0;
+    @include breakpoint (md) {
+      line-height: 20px;
+    } 
     span {
       color: $theme-color;
       @include breakpoint(sm) {
         font-size: 32px;
+      }
+      @include breakpoint (max-md) {
+        line-height: 1.5;
       }
     }
   }

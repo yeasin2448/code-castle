@@ -3,10 +3,16 @@
   .banner-slider {
     .swiper-wrapper {
       .swiper-slide {
-        min-height: 700px;
+        min-height: 400px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        @include breakpoint(sm) {
+          min-height: 550px;
+        }
+        @include breakpoint(md) {
+          min-height: 700px;
+        }
         &.banner-bg1 {
           background-image: url(../../assets/images/banner/03.jpg);
         }
@@ -20,8 +26,16 @@
           background-image: url(../../assets/images/banner/04.jpg);
         }
         .banner-content {
-          min-height: 700px;
-          line-height: 700px;
+          min-height: 400px;
+          line-height: 400px;
+          @include breakpoint(sm) {
+            min-height: 550px;
+            line-height: 550px;
+          }
+          @include breakpoint(md) {
+            min-height: 700px;
+            line-height: 700px;
+          }
           .banner-text {
             display: inline-block;
             vertical-align: middle;
@@ -32,10 +46,16 @@
               margin: 0;
               font-weight: 600;
               color: $white-color;
+              @include breakpoint (max-sm) {
+                font-size: 32px;
+              }
             }
             h3 {
               margin: 0;
               color: $white-color;
+              @include breakpoint (max-sm) {
+                font-size: 32px;
+              }
             }
             p {
               margin: 0;
@@ -85,11 +105,14 @@
     }
   }
   &.style-one {
-    min-height: 300px;
+    min-height: 200px;
     text-align: center;
     background-size: cover;
     background-position: center;
     background-image: url(../../assets/images/about/page-title-bg.jpeg);
+    @include breakpoint (sm) {
+      min-height: 300px;
+    }
     h2 {
       margin: 0;
       font-weight: 600;
@@ -98,9 +121,12 @@
     }
     .breadcamp-content {
       line-height: normal;
-      min-height: 300px;
+      min-height: 200px;
       display: flex;
       align-items: center;
+      @include breakpoint (sm) {
+        min-height: 300px;
+      }
       ul.bread-menu {
         li {
           margin: 0 6px;

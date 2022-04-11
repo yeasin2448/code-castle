@@ -257,6 +257,35 @@
     },
   });
 
+  // sponsor slider js
+  var swiper = new Swiper(".sponsor-slider", {
+    grid: {
+      rows: 2,
+    },
+    spaceBetween: 0,
+    speed: 1200,
+    autoplay: {
+      delay: 3200,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 4,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      375: {
+        slidesPerView: 1,
+      },
+    },
+    loop: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+  });
+
   // product view mode change js
   $(".product-view-mode").on("click", "a", function (e) {
     e.preventDefault();
@@ -305,41 +334,51 @@
   });
 
   //Tabs Box
-	if($('.tabs-box').length){
-		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
-			e.preventDefault();
-			var target = $($(this).attr('data-tab'));
-			
-			if ($(target).is(':visible')){
-				return false;
-			}else{
-				target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
-				$(this).addClass('active-btn');
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab');
-				$(target).fadeIn(300);
-				$(target).addClass('active-tab');
-			}
-		});
-	}
+  if ($(".tabs-box").length) {
+    $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
+      e.preventDefault();
+      var target = $($(this).attr("data-tab"));
+
+      if ($(target).is(":visible")) {
+        return false;
+      } else {
+        target
+          .parents(".tabs-box")
+          .find(".tab-buttons")
+          .find(".tab-btn")
+          .removeClass("active-btn");
+        $(this).addClass("active-btn");
+        target
+          .parents(".tabs-box")
+          .find(".tabs-content")
+          .find(".tab")
+          .fadeOut(0);
+        target
+          .parents(".tabs-box")
+          .find(".tabs-content")
+          .find(".tab")
+          .removeClass("active-tab");
+        $(target).fadeIn(300);
+        $(target).addClass("active-tab");
+      }
+    });
+  }
 
   // Porfolio isotope and filter
-  $(window).on('load', function () {
-    var projectIsotope = $('.project-grid').isotope({
-      itemSelector: '.project-grid-item',
+  $(window).on("load", function () {
+    var projectIsotope = $(".project-grid").isotope({
+      itemSelector: ".project-grid-item",
       percentPosition: true,
-			masonry: {
-				columnWidth: 0
-			}
+      masonry: {
+        columnWidth: 0,
+      },
     });
-    $('#project-flters li').on('click', function () {
-      $("#project-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
+    $("#project-flters li").on("click", function () {
+      $("#project-flters li").removeClass("filter-active");
+      $(this).addClass("filter-active");
       projectIsotope.isotope({
-        filter: $(this).data('filter')
+        filter: $(this).data("filter"),
       });
     });
   });
-
-
 })(jQuery);

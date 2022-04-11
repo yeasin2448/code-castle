@@ -6,8 +6,13 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       li {
+        margin: 15px;
+        @include breakpoint (max-mobile) {
+          margin: 7.5px;
+          width: calc(100% / 2 - 15px);
+        }
         .counter-item {
           padding: 24px;
           text-align: center;
@@ -53,6 +58,9 @@
             margin: 0 30px;
             -webkit-transform: rotate(-30deg) skew(25deg);
             transform: rotate(-30deg) skew(25deg);
+            @include breakpoint (max-mobile) {
+              margin: 0 20px;
+            }
             span {
               position: absolute;
               -webkit-transform: rotate(41deg);
@@ -280,9 +288,12 @@
           letter-spacing: 0.5px;
         }
         h2 {
-          font-size: 38px;
+          font-size: 24px;
           font-weight: 700;
           margin-bottom: 20px;
+          @include breakpoint (sm) {
+            font-size: 38px;
+          }
         }
         p {
           margin-bottom: 15px;
@@ -300,7 +311,7 @@
       }
       .years-design {
         position: absolute;
-        left: -75px;
+        left: 25px;
         bottom: 25px;
         text-align: left;
         padding: 20px 40px 20px 40px;
@@ -308,6 +319,9 @@
         border-bottom: 2px solid $theme-color;
         -webkit-box-shadow: -1px 3px 20px 0px rgba(82, 90, 101, 0.1);
         box-shadow: -1px 3px 20px 0px rgba(82, 90, 101, 0.1);
+        @include breakpoint (sm) {
+          left: -75px;
+        }
         h2 {
           font-size: 70px;
           font-weight: 700;
@@ -1792,7 +1806,7 @@ footer {
       font-weight: 400;
       float: left;
       cursor: pointer;
-      padding: 16px 48px;
+      padding: 12px 40px;
       border-radius: 5px;
       background-color: #ffffff;
       -webkit-transition: all 300ms ease;
@@ -1800,6 +1814,9 @@ footer {
       -o-transition: all 300ms ease;
       -moz-transition: all 300ms ease;
       transition: all 300ms ease;
+      @include breakpoint (sm) {
+        padding: 16px 48px;
+      }
       &.active-btn {
         color: #ffffff;
         background: #ff0300;
@@ -2062,7 +2079,7 @@ footer {
         font-weight: 500;
         text-transform: capitalize;
         margin: 6px;
-        padding: 10px 25px;
+        padding: 10px 12px;
         background-color: #fff;
         cursor: pointer;
         border-radius: 6px;
@@ -2074,6 +2091,9 @@ footer {
         -o-transition: all 0.5s ease-in-out 0s;
         -webkit-transition: all 0.5s ease-in-out 0s;
         transition: all 0.5s ease-in-out 0s;
+        @include breakpoint (sm) {
+          padding: 10px 25px;
+        }
         &.filter-active {
           color: #fff;
           background-color: $theme-color;
@@ -2212,7 +2232,7 @@ footer {
           max-width: 595px;
           letter-spacing: 0.025em;
           color: #151515;
-          @include breakpoint (md) {
+          @include breakpoint(md) {
             font-size: 16px;
             line-height: 1.5;
           }
@@ -2252,8 +2272,10 @@ footer {
           }
         }
         .form-wrap-inner {
+          margin-bottom: 16px;
           position: relative;
-          input.form-input {
+          input.form-input,
+          textarea.form-input {
             display: block;
             width: 100%;
             min-height: 50px;
@@ -2265,6 +2287,7 @@ footer {
             background-color: #ffffff;
             background-image: none;
             border-radius: 0;
+            border-radius: 6px;
             -webkit-appearance: none;
             transition: 0.3s ease-in-out;
             border: 1px solid #e0e0e0;
@@ -2284,7 +2307,7 @@ footer {
           }
           .form-label {
             position: absolute;
-            top: 13px;
+            top: 50%;
             left: 0;
             right: 0;
             padding-left: 26px;
@@ -2300,22 +2323,188 @@ footer {
             will-change: transform;
             white-space: nowrap;
             overflow: hidden;
+            transform: translateY(-50%);
             text-overflow: ellipsis;
+          }
+          textarea.form-input {
+            height: 175px;
+            min-height: 50px;
+            max-height: 298px;
+            resize: vertical;
           }
         }
       }
       &.form-lg {
         .form-input {
+          height: 60px;
+          width: 100%;
           min-height: 60px;
+          border: 1px solid #e0e0e0;
         }
         .form-label {
-          top: 18px;
+          top: 24px !important;
         }
+      }
+      &.form-corporate {
+        padding: 30px 20px;
+        background: #f3f4f9;
+      }
+    }
+    .group {
+      .variants {
+        display: flex;
+        align-items: center;
+      }
+
+      .variants > div {
+        margin-right: 5px;
+      }
+
+      .variants > div:last-of-type {
+        margin-right: 0;
+      }
+
+      .file {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .file > input[type="file"] {
+        display: none;
+      }
+
+      .file > label {
+        font-size: 1rem;
+        font-weight: 300;
+        cursor: pointer;
+        outline: 0;
+        user-select: none;
+        border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+        border-style: solid;
+        border-radius: 4px;
+        border-width: 1px;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(0, 0%, 29%);
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .file > label:hover {
+        border-color: hsl(0, 0%, 21%);
+      }
+
+      .file > label:active {
+        background-color: hsl(0, 0%, 96%);
+      }
+
+      .file > label > i {
+        padding-right: 5px;
+      }
+
+      .file--upload > label {
+        color: #209cee;
+        border-color: hsl(204, 86%, 53%);
+      }
+
+      .file--upload > label:hover {
+        border-color: hsl(204, 86%, 53%);
+        background-color: hsl(204, 86%, 96%);
+      }
+
+      .file--upload > label:active {
+        background-color: hsl(204, 86%, 91%);
       }
     }
   }
 }
 //?=== resume area css start ===?//
+
+// ?=== Our Partner css start ===?
+.our-partner {
+  padding: 60px 0;
+  .section-wrapper {
+    padding-top: 60px;
+    .sponsor-slider {
+      .swiper-wrapper {
+        flex-direction: row;
+        .swiper-slide {
+          padding: 12px;
+          .sponsor-thumb {
+            text-align: center;
+            &:hover {
+              img {
+                opacity: 1;
+              }
+            }
+            img {
+              width: auto;
+              opacity: 0.5;
+              transition: 0.44s all ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// ?=== Our Partner css ends  ===?
+
+// ?=== our customer css start ===?
+.customers-area {
+  padding: 60px 0;
+  background: #2a2b2b;
+  .section-header {
+    h3 {
+      color: $white-color;
+    }
+  }
+  .section-wrapper {
+    padding-top: 40px;
+    .customer-item {
+      text-align: center;
+      .item-text {
+        .des-icon {
+          svg {
+            path{
+              fill: $white-color;
+            }
+          }
+        }
+        p {
+          color: #fff;
+          margin: 0 auto;
+          font-weight: 400;
+          font-size: 14px;
+          max-width: 300px;
+        }
+      }
+      .item-thumb {
+        padding-top: 24px;
+        h4 {
+          margin: 0;
+          color: #fff;
+          font-weight: 500;
+          font-size: 18px;
+          padding-top: 16px;
+        }
+        p {
+          margin: 0;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+// ?=== our customer css ends  ===?
 
 @keyframes slide {
   from {
@@ -2323,6 +2512,17 @@ footer {
   }
   to {
     background-position: 3000px 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    color: hsl(48, 100%, 67%);
+  }
+  50% {
+    color: hsl(48, 100%, 38%);
+  }
+  100% {
+    color: hsl(48, 100%, 67%);
   }
 }
 
