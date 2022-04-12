@@ -27,7 +27,7 @@ header {
           width: 75%;
         }
         @include breakpoint(xl) {
-          width: 70%;
+          width: 72%;
         }
         @media (min-width: 1350px) {
           width: 66%;
@@ -178,7 +178,7 @@ header {
           width: calc(100% - 75%);
         }
         @include breakpoint(xl) {
-          width: calc(100% - 70%);
+          width: calc(100% - 72%);
         }
         @media (min-width: 1350px) {
           width: calc(100% - 70%);

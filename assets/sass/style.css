@@ -920,7 +920,7 @@ header .header-sticky .header-item .logo-area {
 
 @media (min-width: 1200px) {
   header .header-sticky .header-item .logo-area {
-    width: 70%;
+    width: 72%;
   }
 }
 
@@ -1132,7 +1132,7 @@ header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-me
 
 @media (min-width: 1200px) {
   header .header-sticky .header-item .user-item {
-    width: calc(100% - 70%);
+    width: calc(100% - 72%);
   }
 }
 
