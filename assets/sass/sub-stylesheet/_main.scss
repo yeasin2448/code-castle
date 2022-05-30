@@ -1,3 +1,201 @@
+//?=== quize area start ===?//
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-image: url(../../assets/images/banner/quize.png);
+  .logo_area {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  .count_box {
+    .count_clock {
+      span {
+        width: 200px;
+        font-size: 2.24875rem;
+        padding-left: 1rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        background: -webkit-linear-gradient(#ff512f, #f09719);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .count_progress {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background: none;
+      margin: 0 auto;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      position: absolute;
+      top: 30px;
+      right: 60px;
+      &span {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+      .progress-value {
+        width: 90%;
+        height: 90%;
+        border-radius: 100%;
+        background-color: #ffffff;
+        font-size: 25px;
+        color: #222222;
+        line-height: 89px;
+        text-align: center;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-weight: 600;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: 5px solid #fd5c2c;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &.clip-3 {
+          &::after {
+            clip: rect(0rem, 7.5em, 8em, 2rem);
+          }
+        }
+      }
+    }
+  }
+  .multisteps_form {
+    max-width: 56.25rem;
+    min-height: 45.9375rem;
+    margin: 5rem auto;
+    border-radius: 0.625rem;
+    background-image: url(../../assets/images/quize/rounded-rectangle.png),
+      url(../../assets/images/quize/rounded-rectangle-2.png);
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
+    .multisteps_form_panel {
+      display: none;
+      .question_title h1 {
+        color: #2f3146;
+        font-size: 3.125rem;
+        padding: 3.8rem 5rem;
+        font-weight: 800;
+        line-height: 60px;
+        &.animate_25ms {
+          -webkit-animation-delay: 25ms;
+          animation-delay: 25ms;
+        }
+      }
+      .question_number {
+        span {
+          font-size: 1rem;
+          font-weight: 600;
+          padding: 0.5rem 1.5rem;
+          background: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(#ff512f),
+            to(#f09719)
+          );
+          background: linear-gradient(to right, #ff512f, #f09719);
+        }
+      }
+      .form_items {
+        padding: 2rem;
+        li {
+          position: relative;
+          margin-top: 1.3rem;
+          margin-bottom: 1.875rem;
+          padding-left: 4.6875rem;
+          label {
+            font-size: 1.375rem;
+            color: #636363;
+            font-weight: 600;
+            cursor: pointer;
+          }
+          input {
+            display: none;
+          }
+          &.animate_50ms {
+            -webkit-animation-delay: 50ms;
+            animation-delay: 50ms;
+          }
+          &.animate_100ms {
+            -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+          }
+          &::before {
+            content: "";
+            top: 50%;
+            left: 26px;
+            font-size: 1.6625rem;
+            line-height: 1;
+            font-weight: 900;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background: -webkit-linear-gradient(#ff512f, #f09719);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;
+            position: absolute;
+            font-family: "Font Awesome 5 Free";
+            display: none;
+          }
+          &::after {
+            content: "";
+            width: 2.8125rem;
+            height: 2.8125rem;
+            top: 50%;
+            left: 14px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            position: absolute;
+            border-radius: 100%;
+            border: 3px solid #e3e3e3;
+            cursor: pointer;
+          }
+          &.active {
+            label {
+              background: -webkit-linear-gradient(#ff512f, #f09719);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            &::before {
+              display: block;
+              z-index: 2;
+            }
+            &:after {
+              border-color: #f67a22;
+              -webkit-transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+              transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+  a,
+  button,
+  input {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+//?=== quize area ends  ===?//
+
 //?=== counter area start ===?//
 .counter-area {
   padding: 60px 0;
@@ -9,7 +207,7 @@
       justify-content: center;
       li {
         margin: 15px;
-        @include breakpoint (max-mobile) {
+        @include breakpoint(max-mobile) {
           margin: 7.5px;
           width: calc(100% / 2 - 15px);
         }
@@ -58,7 +256,7 @@
             margin: 0 30px;
             -webkit-transform: rotate(-30deg) skew(25deg);
             transform: rotate(-30deg) skew(25deg);
-            @include breakpoint (max-mobile) {
+            @include breakpoint(max-mobile) {
               margin: 0 20px;
             }
             span {
@@ -291,7 +489,7 @@
           font-size: 24px;
           font-weight: 700;
           margin-bottom: 20px;
-          @include breakpoint (sm) {
+          @include breakpoint(sm) {
             font-size: 38px;
           }
         }
@@ -319,7 +517,7 @@
         border-bottom: 2px solid $theme-color;
         -webkit-box-shadow: -1px 3px 20px 0px rgba(82, 90, 101, 0.1);
         box-shadow: -1px 3px 20px 0px rgba(82, 90, 101, 0.1);
-        @include breakpoint (sm) {
+        @include breakpoint(sm) {
           left: -75px;
         }
         h2 {
@@ -1814,7 +2012,7 @@ footer {
       -o-transition: all 300ms ease;
       -moz-transition: all 300ms ease;
       transition: all 300ms ease;
-      @include breakpoint (sm) {
+      @include breakpoint(sm) {
         padding: 16px 48px;
       }
       &.active-btn {
@@ -2091,7 +2289,7 @@ footer {
         -o-transition: all 0.5s ease-in-out 0s;
         -webkit-transition: all 0.5s ease-in-out 0s;
         transition: all 0.5s ease-in-out 0s;
-        @include breakpoint (sm) {
+        @include breakpoint(sm) {
           padding: 10px 25px;
         }
         &.filter-active {
@@ -2472,7 +2670,7 @@ footer {
       .item-text {
         .des-icon {
           svg {
-            path{
+            path {
               fill: $white-color;
             }
           }
